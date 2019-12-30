@@ -1,7 +1,7 @@
 #!/usr/bin/with-contenv bash
 
 pwd1=`openssl rand -base64 18`
-pwd2="dQ0edEdD6dWZMJj"
+pwd2=`openssl rand -base64 18`
 
 echo "================================="
 echo "Password Routine"
