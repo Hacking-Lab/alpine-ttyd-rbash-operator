@@ -10,7 +10,7 @@ echo $groupid
 echo $homedir
 
 chown -R $userid /home/$HL_USER_USERNAME
-chmod 440 /home/$HL_USER_USERNAME/.bashrc
+chmod 640 /home/$HL_USER_USERNAME/.bashrc
 sed -i -e "s/HL_USER_USERNAME/$HL_USER_USERNAME/g" /home/$HL_USER_USERNAME/.bashrc
 chown -R root:root /home/$HL_USER_USERNAME/bin
 
