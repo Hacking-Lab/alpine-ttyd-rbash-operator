@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  alpine-ttyd-rbash:
+    image: hackinglab/alpine-ttyd-rbash:3.0.6
+    hostname: 'alpine-ttyd-rbash'
+    environment:
+      - "HL_USER_USERNAME=ttyoperator"
+      - "HL_USER_PASSWORD=compass"
+    env_file:
+      - ./UUID-hobo.env
+    volumes:
+      - ./UUID-hobo.gn:/goldnugget/UUID-hobo.gn
+    ports:
+      - 7681:7681

@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  alpine-ttyd-rbash-hobo:
+    image: REGISTRY_BASE_URL/alpine-ttyd-rbash:latest
+    hostname: 'hobo'
+    environment:
+      - "domainname=idocker.REALM_DOMAIN_SUFFIX"
+      - "HL_USER_USERNAME=ttyoperator"
+      - "HL_USER_PASSWORD=compass"
+    labels:
+      - "traefik.port=7681"
+      - "traefik.frontend.rule=Host:hobo.REALM_DOMAIN_SUFFIX"
+      - "traefik.protocol=http"
+    env_file:
+      - ./UUID-hobo.env
+    volumes:
+      - ./UUID-hobo.gn:/goldnugget/UUID-hobo.gn
+
+      

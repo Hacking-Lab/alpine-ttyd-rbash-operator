@@ -1,0 +1,17 @@
+#!/usr/bin/with-contenv sh
+
+
+homedir=$( getent passwd "$HL_USER_USERNAME" | cut -d: -f6 )
+userid=$( id -u "$HL_USER_USERNAME" ) 
+groupid=$( id -g "$HL_USER_USERNAME" )
+cd $homedir
+echo $userid
+echo $groupid
+echo $homedir
+
+chown -R $userid /home/$HL_USER_USERNAME
+chmod 440 /home/$HL_USER_USERNAME/.bashrc
+sed -i -e "s/HL_USER_USERNAME/$HL_USER_USERNAME/g" /home/$HL_USER_USERNAME/.bashrc
+chown -R root:root /home/$HL_USER_USERNAME/bin
+
+exec ttyd -B -u $userid -g $groupid rbash --rcfile /home/$HL_USER_USERNAME/.bashrc;
