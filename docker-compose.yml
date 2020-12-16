@@ -6,7 +6,7 @@ services:
     image: hackinglab/alpine-ttyd-rbash-operator:3.2 
     environment:
     - AUTHOR=e1
-    - "HL_USER_USERNAME=gugus"
+    - "HL_USER_USERNAME=ttyoperator"
     - "HL_USER_PASSWORD=compass"
     ports:
       - 7681:7681
