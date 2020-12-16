@@ -30,5 +30,5 @@ chown -R $HL_USER_USERNAME:$HL_USER_USERNAME /home/$HL_USER_USERNAME
 chown -R root:root /home/$HL_USER_USERNAME/bin
 
 
-exec /usr/bin/ttyd -u $userid -g $groupid bash --rcfile /etc/bashrc;
+exec /usr/bin/ttyd -u $userid -g $groupid rbash --rcfile /home/$HL_USER_USERNAME/.bashrc;
 #exec ttyd -B -u $userid -g $groupid bash --rcfile /etc/bashrc;

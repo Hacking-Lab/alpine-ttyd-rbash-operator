@@ -43,7 +43,10 @@ COPY --from=ttydbuild /ttyd/build/ttyd /usr/bin/ttyd
 # rm -rf /var/cache/apk/*
 
 COPY --from=libwebsocketsbuild /home/packager/packages/x86_64 /src
-RUN apk add --allow-untrusted /src/libwebsockets-4.0.20-r0.apk
+RUN apk add --allow-untrusted /src/libwebsockets-4.0.20-r0.apk && \
+    rm -rf /var/cache/apk/* && \
+    ln -s /bin/bash /bin/rbash
+
 
 # Add the files
 ADD root /
