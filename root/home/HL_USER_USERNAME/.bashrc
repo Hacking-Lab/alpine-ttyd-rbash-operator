@@ -32,5 +32,9 @@ echo "        Hacking-Lab           "
 echo "=============================="
 
 PATH=/home/HL_USER_USERNAME/bin
+HOME=/home/HL_USER_USERNAME
 export PATH
+export HOME
+
+
 

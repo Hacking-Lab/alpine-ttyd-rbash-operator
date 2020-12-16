@@ -31,3 +31,6 @@ echo "=============================="
 echo "        Hacking-Lab           "
 echo "=============================="
 
+HOME=/home/HL_USER_USERNAME
+export HOME
+

@@ -1,12 +1,13 @@
-# Alpine Operator
-## Introduction
-This is the alpine ttyd web shell rbash image
+# alpine-ttyd
+Alpine Docker Image with ttyd 
+* problem: libwebsockets without -DLWS_WITH_LIBUV=ON breaks ttyd package
+* fixing the problem with https://github.com/void-linux/void-packages/issues/19441
+* fixing the problem with https://gitlab.alpinelinux.org/alpine/aports/-/issues/11936
+* fixing the problem: libwebsockets context creation failed
 
-## Usage
-* operator access
-* ping
-* ls
-* tee
 
-## Purpose
-Give operator a tool for minimal network debugging in docker network
+Acknowledgment libwebsocket solution
+* fix is based on https://github.com/matti/docker-alpine-libwebsockets-with-libuv
+
+Acknowledgment ttyd 
+* https://github.com/tsl0922/ttyd
