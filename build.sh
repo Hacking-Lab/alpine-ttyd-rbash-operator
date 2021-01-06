@@ -8,6 +8,10 @@ docker build --no-cache -t hackinglab/alpine-ttyd-rbash-operator:3.2.0 -t hackin
 docker build --no-cache -t hackinglab/alpine-ttyd-rbash:3.2.0 -t hackinglab/alpine-ttyd-rbash:3.2 -t hackinglab/alpine-ttyd-rbash:latest -f Dockerfile .
 
 docker push hackinglab/alpine-ttyd-rbash-operator
+docker push hackinglab/alpine-ttyd-rbash-operator:3.2
+docker push hackinglab/alpine-ttyd-rbash-operator:3.2.0
 docker push hackinglab/alpine-ttyd-rbash
+docker push hackinglab/alpine-ttyd-rbash:3.2
+docker push hackinglab/alpine-ttyd-rbash:3.2.0
 
 
