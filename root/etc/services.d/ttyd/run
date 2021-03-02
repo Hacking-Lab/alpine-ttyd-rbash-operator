@@ -29,6 +29,7 @@ cp /home/HL_USER_USERNAME/.bashrc /home/$HL_USER_USERNAME/.bashrc
 chown -R $HL_USER_USERNAME:$HL_USER_USERNAME /home/$HL_USER_USERNAME
 chown -R root:root /home/$HL_USER_USERNAME/bin
 
+ls -al /home/$HL_USER_USERNAME/
 
-exec /usr/bin/ttyd -u $userid -g $groupid rbash --rcfile /home/$HL_USER_USERNAME/.bashrc;
+exec /usr/local/bin/ttyd -u $userid -g $groupid rbash --rcfile /home/$HL_USER_USERNAME/.bashrc;
 #exec ttyd -B -u $userid -g $groupid bash --rcfile /etc/bashrc;
